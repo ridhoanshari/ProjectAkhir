@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MIPA Chatbot ULM - Chatbot</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/LogoULM.ico') }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- CSS here -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/price_rangs.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slicknav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slick.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+
+<body style="background-image: url(../static/images/bg.png)">
+  <!-- Preloader Start -->
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src={{ url_for('static', filename="images/preloader.png" ) }}>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+
+  <!-- partial:index.partial.html -->
+  <section class="msger">
+    <header>
+      <!-- Header Start -->
+      <div class="header-area header-transparrent">
+        <div class="headder-top header-sticky">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-3 col-md-2">
+                <!-- Logo -->
+                <div class="logo">
+                  <a href="{{url_for ('index')}}"><img src={{ url_for('static', filename="images/logo-nama.png" ) }}></a>
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-9">
+                <div class="menu-wrapper">
+                  <!-- Main-menu -->
+                  <div class="main-menu">
+                    <form action="{{url_for ('index')}}">
+                        <button id="kembali" type="submit" class="genric-btn warning">BACK TO HOME</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Mobile Menu -->
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->
+    </header>
+
+    <main class="msger-chat" style="background-image: url(static/images/bgcht.png)">
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url(static/images/iconbot.png)"></div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">MipaChatbot</div>
+            <div class="msg-info-time">Sekarang</div>
+          </div>
+          <div class="msg-text">
+            Hai, <span class="fw-bold">{{nama}}</span> Selamat datang di MipaChatBot! Kamu mau tau informasi ruangan di
+            Mipa, kan? ayo cari. 😄
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Masukan Pesan...">
+      <button type="submit" class="msger-send-btn">Kirim</button>
+    </form>
+  </section>
+
+  <!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+
+
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "static/images/iconbot.png";
+    const PERSON_IMG = "static/images/iconuser.png";
+    const BOT_NAME = "    MipaChatbot";
+    const PERSON_NAME = "You";
+
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+
+      // Bot Response
+      $.get("/get", { msg: rawText }).done(function (data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+
+      });
+
+    }
+
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+
+
+  </script>
+
+  <!-- JS here -->
+
+  <!-- All JS Custom Plugins Link Here here -->
+  <script src="{{ url_for('static' , filename='assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="{{ url_for('static', filename='assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+  <!-- Jquery Mobile Menu -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.slicknav.min.js') }}"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="{{ url_for('static', filename='assets/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/slick.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/price_rangs.js') }}"></script>
+
+  <!-- One Page, Animated-HeadLin -->
+  <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/animated.headline.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.js') }}"></script>
+
+  <!-- Scrollup, nice-select, sticky -->
+  <script src="{{ url_for('static', filename='assets/js/jquery.scrollUp.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.nice-select.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.sticky.js') }}"></script>
+
+  <!-- contact js -->
+  <script src="{{ url_for('static', filename='assets/js/contact.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.form.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.validate.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/mail-script.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.ajaxchimp.min.js') }}"></script>
+
+  <!-- Jquery Plugins, main Jquery -->
+  <script src="{{ url_for('static', filename='assets/js/plugins.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+
+</html>

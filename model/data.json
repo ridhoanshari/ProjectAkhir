@@ -1,0 +1,656 @@
+{
+    "intents": [
+      {
+        "tag": "sapaan",
+        "patterns": [
+          "hallo",
+          "hai",
+          "halo",
+          "hallow",
+          "hei",
+          "hi",
+          "uy",
+          "pagi",
+          "morning",
+          "siang",
+          "afternoon",
+          "sore",
+          "malam",
+          "bro",
+          "sanak",
+          "kawan"
+        ],
+        "responses": [
+          "Hai! MIPA Chatbot ULM di sini. Mau tau informasi tentang sarana dan prasarana apa nih?",
+          "Halo! Saya MIPA Chatbot ULM, salam kenal ya! Mau tau tentang sarana dan prasarana Fakultas kita ini, kan?",
+          "Helo! Ini MIPA Chatbot ULM. Lagi kepo tentang sarana dan prasarana Fakultas kita ini ya?"
+        ]
+      },
+      {
+        "tag": "jawab_ya",
+        "patterns": [
+          "iya",
+          "ya",
+          "iih",
+          "betul",
+          "benar",
+          "bujur banar",
+          "bujur"
+        ],
+        "responses": [
+          "Kepo sama letak ruangan apa iventaris kita nih?"
+        ]
+      },
+      {
+        "tag": "tanya_ruangan",
+        "patterns": [
+          "Mau mencari ruangan",
+          "Mau nyari ruangan",
+          "cari ruangan",
+          "letak ruangan",
+          "nyari ruangan"
+        ],
+        "responses": [
+          "Bisa banget, mau cari ruangan apa? (contoh : Dimana letak Ruangan 1.1)"
+        ]
+      },
+      {
+        "tag": "tanya_inventaris",
+        "patterns": [
+          "Info inventaris lab",
+          "Info inventaris laboratorium",
+          "inventaris lab",
+          "inventaris laboratorium"
+        ],
+        "responses": [
+          "Mau tau inventaris laboratorium apa nih? (contoh : Inventaris labkom)"
+        ]
+      },
+      {
+        "tag": "sudah_selesai",
+        "patterns": [
+          "okedeh",
+          "oke",
+          "okey",
+          "okay",
+          "okei",
+          "Dah",
+          "Dadah",
+          "Bye",
+          "Byee",
+          "Good bye",
+          "Selamat tinggal",
+          "Sampai jumpa",
+          "Bai",
+          "See you"
+        ],
+        "responses": [
+          "Bye!",
+          "Dadahh!",
+          "Good bye!",
+          "Dahh, semoga harimu menyenangkan yaa!",
+          "Sampai jumpa lagi!",
+          "See u! Senang bisa membantu"
+        ]
+      },
+      {
+        "tag": "terimakasih",
+        "patterns": [
+          "Thanks",
+          "Thank you",
+          "Terima kasih",
+          "Terimakasih",
+          "Makasih",
+          "Terima kasih banyak"
+        ],
+        "responses": [
+          "Dengan senang hati:)"
+        ]
+      },
+      {
+        "tag": "dimana_aula",
+        "patterns": [
+          "dimana aula",
+          "letak aula",
+          "dimana letak ruangan aula",
+          "ruangan aula",
+          "ruang aula",
+          "aula"
+        ],
+        "responses": [
+          "Di FMIPA ada aula farmasi, aula apoteker, aula tesla. Mau tanya letak aula yang mana nih? "
+        ]
+      },
+      {
+        "tag": "rk_gd1_lt1",
+        "patterns": [
+          "Dimana letak Ruangan 1.1",
+          "Dimana Ruangan 1.1",
+          "Dimana ruang kelas 1.1",
+          "Ruangan 1.1",
+          "ruang kelas 1.1",
+          "Dimana letak Ruangan 1.2",
+          "Dimana Ruangan 1.2",
+          "Dimana ruang kelas 1.2",
+          "Ruangan 1.2",
+          "ruang kelas 1.2"
+        ],
+        "responses": [
+          "Ruangan kelas tersebut ada di gedung 1 FMIPA ULM lantai 1 yang berkapasitas 40 sampai 70 orang"
+        ]
+      },
+      {
+        "tag": "rk_gd1_lt2",
+        "patterns": [
+          "Dimana letak Ruangan 2.1",
+          "Dimana Ruangan 2.1",
+          "Dimana ruang kelas 2.1",
+          "Ruangan 2.1",
+          "ruang kelas 2.1",
+          "Dimana letak Ruangan 2.2",
+          "Dimana Ruangan 2.2",
+          "Dimana ruang kelas 2.2",
+          "Ruangan 2.2",
+          "ruang kelas 2.2",
+          "Dimana letak Ruangan 2.3",
+          "Dimana Ruangan 2.3",
+          "Dimana ruang kelas 2.3",
+          "Ruangan 2.3",
+          "ruang kelas 2.3",
+          "Dimana letak Ruangan 2.4",
+          "Dimana Ruangan 2.4",
+          "Dimana ruang kelas 2.4",
+          "Ruangan 2.4",
+          "ruang kelas 2.4",
+          "Dimana letak Ruangan 2.5",
+          "Dimana Ruangan 2.5",
+          "Dimana ruang kelas 2.5",
+          "Ruangan 2.5",
+          "ruang kelas 2.5",
+          "Dimana letak Ruangan 2.6",
+          "Dimana Ruangan 2.6",
+          "Dimana ruang kelas 2.6",
+          "Ruangan 2.6",
+          "ruang kelas 2.6",
+          "Dimana letak Ruangan 2.7",
+          "Dimana Ruangan 2.7",
+          "Dimana ruang kelas 2.7",
+          "Ruangan 2.7",
+          "ruang kelas 2.7"
+        ],
+        "responses": [
+          "Ruangan kelas tersebut ada di gedung 1 FMIPA ULM lantai 2 yang berkapasitas 60 sampai 100 orang"
+        ]
+      },
+      {
+        "tag": "aula_tesla",
+        "patterns": [
+          "Dimana letak Ruangan Aula tesla",
+          "Dimana Ruangan Aula tesla",
+          "Dimana ruang Aula tesla",
+          "Ruangan Aula tesla",
+          "ruang Aula tesla",
+          "Aula tesla"
+        ],
+        "responses": [
+          "Ruangan aula tesla ada di gedung 2 FMIPA ULM lantai 1 yang terletak didekat pintu gerbang masuk yang berkapasitas 100 sampai 120 orang"
+        ]
+      },
+      {
+        "tag": "aula_farmasi",
+        "patterns": [
+          "Dimana letak Ruangan Aula Farmasi",
+          "Dimana Ruangan Aula Farmasi",
+          "Dimana ruang Aula Farmasi",
+          "Ruangan Aula Farmasi",
+          "ruang Aula Farmasi",
+          "Aula Farmasi"
+        ],
+        "responses": [
+          "Ruangan aula farmasi ada di gedung 2 FMIPA ULM lantai 3 yang berkapasitas 70 sampai 90 orang"
+        ]
+      },
+      {
+        "tag": "aula_apoteker",
+        "patterns": [
+          "Dimana letak Ruangan Aula Apoteker",
+          "Dimana Ruangan Aula Apoteker",
+          "Dimana ruang Aula Apoteker",
+          "Ruangan Aula Apoteker",
+          "ruang Aula Apoteker",
+          "Aula Apoteker",
+          "Dimana letak Ruangan Apoteker",
+          "Dimana Ruangan Apoteker",
+          "Dimana ruang Apoteker",
+          "Ruangan Apoteker",
+          "ruang Apoteker",
+          "Apoteker"
+        ],
+        "responses": [
+          "Ruangan apoteker dan aula apoteker ada di gedung 2 FMIPA ULM lantai 1 yang berkapasitas 120 sampai 160 orang"
+        ]
+      },
+      {
+        "tag": "ruang_apoteker",
+        "patterns": [
+          "Dimana letak Ruangan Apoteker 3.1",
+          "Dimana Ruangan Apoteker 3.1",
+          "Dimana ruang Apoteker 3.1",
+          "Apoteker 3.1",
+          "ruang Apoteker 3.1",
+          "Dimana letak Ruangan Apoteker 3.2",
+          "Dimana Ruangan Apoteker 3.2",
+          "Dimana ruang Apoteker 3.2",
+          "Apoteker 3.2",
+          "ruang Apoteker 3.2",
+          "Dimana letak Ruangan Apoteker 3.3",
+          "Dimana Ruangan Apoteker 3.3",
+          "Dimana ruang Apoteker 3.3",
+          "Apoteker 3.3",
+          "ruang Apoteker 3.3"
+        ],
+        "responses": [
+          "Ruangan kelas tersebut ada di gedung 2 FMIPA ULM lantai 3 yang berkapasitas 70 sampai 95 orang"
+        ]
+      },
+      {
+        "tag": "labkom",
+        "patterns": [
+          "Dimana letak labkom",
+          "Dimana labkom",
+          "Dimana letak lab komputer",
+          "Dimana lab komputer",
+          "labkom",
+          "laboratorium ilkom",
+          "laboratorium ilmu komputer",
+          "lab ilkom",
+          "lab ilmu komputer",
+          "lab komputer",
+          "laboratorium Komputer"
+        ],
+        "responses": [
+          "Laboratorium komputer ada di gedung 2 FMIPA ULM lantai 2 dan 3 yang berkapasitas 60 sampai 80 orang"
+        ]
+      },
+      {
+        "tag": "lab_bio_dasar",
+        "patterns": [
+          "Dimana letak Laboratorium Biologi Dasar dan Ekologi",
+          "Dimana Laboratorium Biologi Dasar dan Ekologi",
+          "Dimana letak lab Biologi Dasar dan Ekologi",
+          "Dimana lab Biologi Dasar dan Ekologi",
+          "Laboratorium biologi",
+          "Laboratorium ekologi",
+          "Lab biologi",
+          "Lab ekologi",
+          "biologi",
+          "ekologi",
+          "Laboratorium Biologi Dasar dan Ekologi"
+        ],
+        "responses": [
+          "Laboratorium Biologi Dasar dan Ekologi ada di gedung 2 FMIPA ULM lantai 1 bagian belakang gedung dekat musholla"
+        ]
+      },
+      {
+        "tag": "lab_anfis",
+        "patterns": [
+          "Dimana letak Laboratorium Anfis",
+          "Dimana Laboratorium Anfis",
+          "Dimana letak lab Anfis",
+          "Dimana lab Anfis",
+          "Lab Anfis",
+          "Anfis"
+        ],
+        "responses": [
+          "Laboratorium Anfis ada di gedung 2 FMIPA ULM lantai 1 bagian belakang gedung dekat dekat kantin"
+        ]
+      },
+      {
+        "tag": "lab_instrumen",
+        "patterns": [
+          "Dimana letak Laboratorium instrumen",
+          "Dimana Laboratorium instrumen",
+          "Dimana letak lab instrumen",
+          "Dimana lab instrumen",
+          "instrumen"
+        ],
+        "responses": [
+          "Laboratorium instrumen ada di gedung 2 FMIPA ULM lantai 1 ruangan ke 2 setelah tangga sebelah kanan setelah masuk portal"
+        ]
+      },
+      {
+        "tag": "lab_geo_fisika",
+        "patterns": [
+          "Dimana letak Laboratorium geo fisika",
+          "Dimana Laboratorium geo fisika",
+          "Dimana letak lab geo fisika",
+          "Dimana lab geo fisika",
+          "geo fisika",
+          "lab fisika",
+          "lab geo"
+        ],
+        "responses": [
+          "Laboratorium geo fisika ada di gedung 2 FMIPA ULM lantai 2 samping tangga menuju lantai 3"
+        ]
+      },
+      {
+        "tag": "lab_kimia",
+        "patterns": [
+          "Dimana letak Laboratorium kimia",
+          "Dimana Laboratorium kimia",
+          "Dimana letak lab kimia",
+          "Dimana lab kimia",
+          "kimia"
+        ],
+        "responses": [
+          "Laboratorium kimia ada di gedung 2 FMIPA ULM dekat parkiran yang ada atapnya"
+        ]
+      },
+      {
+        "tag": "lab_mikrobiologi",
+        "patterns": [
+          "Dimana letak Laboratorium mikrobiologi",
+          "Dimana Laboratorium mikrobiologi",
+          "Dimana letak lab mikrobiologi",
+          "Dimana lab mikrobiologi",
+          "mikrobiologi"
+        ],
+        "responses": [
+          "Laboratorium mikrobiologi ada di gedung 2 FMIPA ULM lantai 1 dekat parkiran samping musholla"
+        ]
+      },
+      {
+        "tag": "himakom",
+        "patterns": [
+          "Dimana letak sekre himakom",
+          "Dimana sekre himakom",
+          "Dimana kesekretariatan himakom",
+          "Dimana letak kesekretariatan himakom",
+          "kesekretariatan himakom",
+          "himakom"
+        ],
+        "responses": [
+          "kesekretariatan himakom terletak di gedung 2 FMIPA ULM yang berdekatan dengan taman depan dan menghadap ke jalan raya"
+        ]
+      },
+      {
+        "tag": "himafarma",
+        "patterns": [
+          "Dimana letak sekre himafarma",
+          "Dimana sekre himafarma",
+          "Dimana kesekretariatan himafarma",
+          "Dimana letak kesekretariatan himafarma",
+          "kesekretariatan himafarma",
+          "himafarma"
+        ],
+        "responses": [
+          "kesekretariatan himafarma terletak di sebelah kiri gedung 2 FMIPA ULM pada lantai 1 yang berdekatan dengan parkiran mahasiswa program studi farmasi"
+        ]
+      },
+      {
+        "tag": "himafi",
+        "patterns": [
+          "Dimana letak sekre himafi",
+          "Dimana sekre himafi",
+          "Dimana kesekretariatan himafi",
+          "Dimana letak kesekretariatan himafi",
+          "kesekretariatan himafi",
+          "himafi"
+        ],
+        "responses": [
+          "kesekretariatan himafi terletak di sebelah kanan gedung 2 FMIPA ULM pada lantai 1 yang berdekatan dengan kantin"
+        ]
+      },
+      {
+        "tag": "himasta",
+        "patterns": [
+          "Dimana letak sekre himasta",
+          "Dimana sekre himasta",
+          "Dimana kesekretariatan himasta",
+          "Dimana letak kesekretariatan himasta",
+          "kesekretariatan himasta",
+          "himasta"
+        ],
+        "responses": [
+          "kesekretariatan himasta terletak di sebelah kanan gedung 1 FMIPA ULM pada lantai 1 yang berdekatan dengan tangga"
+        ]
+      },
+      {
+        "tag": "himatika",
+        "patterns": [
+          "Dimana letak sekre himatika",
+          "Dimana sekre himatika",
+          "Dimana kesekretariatan himatika",
+          "Dimana letak kesekretariatan himatika",
+          "kesekretariatan himatika",
+          "himatika"
+        ],
+        "responses": [
+          "kesekretariatan himatika terletak di gedung 1 FMIPA ULM sebelah kanan yang berdekatan dengan tempat tunggu antar jemput mahasiswa"
+        ]
+      },
+      {
+        "tag": "himamia",
+        "patterns": [
+          "Dimana letak sekre himamia",
+          "Dimana sekre himamia",
+          "Dimana kesekretariatan himamia",
+          "Dimana letak kesekretariatan himamia",
+          "kesekretariatan himamia",
+          "himamia"
+        ],
+        "responses": [
+          "kesekretariatan himamia terletak di gedung 1 FMIPA ULM sebelah kanan yang berdekatan dengan tempat tunggu antar jemput mahasiswa"
+        ]
+      },
+      {
+        "tag": "bem",
+        "patterns": [
+          "Dimana letak sekre BEM",
+          "Dimana sekre BEM",
+          "Dimana kesekretariatan BEM",
+          "Dimana letak kesekretariatan BEM",
+          "kesekretariatan BEM",
+          "BEM"
+        ],
+        "responses": [
+          "kesekretariatan BEM terletak di gedung 1 FMIPA ULM sebelah kanan yang berdekatan dengan tempat tunggu antar jemput mahasiswa"
+        ]
+      },
+      {
+        "tag": "himabio",
+        "patterns": [
+          "Dimana letak sekre himabio",
+          "Dimana sekre himabio",
+          "Dimana kesekretariatan himabio",
+          "Dimana letak kesekretariatan himabio",
+          "kesekretariatan himabio",
+          "himabio"
+        ],
+        "responses": [
+          "kesekretariatan himabio di gedung 1 FMIPA ULM sebelah kanan yang berdekatan dengan tempat tunggu antar jemput mahasiswa"
+        ]
+      },
+      {
+        "tag": "msc",
+        "patterns": [
+          "Dimana letak sekre MSC",
+          "Dimana sekre MSC",
+          "Dimana kesekretariatanh MSC",
+          "Dimana letak kesekretariatan MSC",
+          "kesekretariatan MSC",
+          "MSC"
+        ],
+        "responses": [
+          "kesekretariatan MSC terletak di sebelah kanan belakang gedung 1 FMIPA ULM dekat dengan parkiran"
+        ]
+      },
+      {
+        "tag": "sgo",
+        "patterns": [
+          "Dimana letak sekre SGO",
+          "Dimana sekre SGO",
+          "Dimana kesekretariatanh SGO",
+          "Dimana letak kesekretariatan SGO",
+          "kesekretariatan SGO",
+          "SGO"
+        ],
+        "responses": [
+          "kesekretariatan SGO terletak di sebelah kanan belakang gedung 1 FMIPA ULM dekat dengan parkiran"
+        ]
+      },
+      {
+        "tag": "uptkm",
+        "patterns": [
+          "Dimana letak sekre UPTKM",
+          "Dimana sekre UPTKM",
+          "Dimana kesekretariatan UPTKM",
+          "Dimana letak kesekretariatan UPTKM",
+          "kesekretariatan UPTKM",
+          "UPTKM"
+        ],
+        "responses": [
+          "kesekretariatan UPTKM terletak di gedung 1 FMIPA ULM lantai 2 ruangan pojok sebelah kiri"
+        ]
+      },
+      {
+        "tag": "fsi",
+        "patterns": [
+          "Dimana letak sekre FSI",
+          "Dimana sekre FSI",
+          "Dimana kesekretariatan FSI",
+          "Dimana letak kesekretariatan FSI",
+          "kesekretariatan FSI",
+          "FSI"
+        ],
+        "responses": [
+          "kesekretariatan FSI terletak di gedung 1 FMIPA ULM lantai 2 ruangan pojok sebelah kanan"
+        ]
+      },
+      {
+        "tag": "musholla",
+        "patterns": [
+          "Dimana letak musholla",
+          "Dimana musholla",
+          "Apa ada musholla",
+          "musholla"
+        ],
+        "responses": [
+          "FMIPA ULM mempunyai 2 musholla di dua gedung yang berbeda, di gedung 1 ada musholla terletak pada lantai 2 yang berdekatan dengan tangga kanan gedung tetapi disini hanya boleh perempuan saja yang memakainya, di gedung 2 ada musholla yang bisa dipakai untuk laki sampai laki dan perempuan yang terletak dekat dengan parkiran belakang dan kantin"
+        ]
+      },
+      {
+        "tag": "gazebo",
+        "patterns": [
+          "Dimana letak gazebo",
+          "Dimana gazebo",
+          "Apa ada gazebo",
+          "gazebo"
+        ],
+        "responses": [
+          "Di gedung 1 FMIPA ULM banyak tersebar gazebo dihalaman depan kelas, di gedung 2 ada dihalaman bagian tengah gedung dekat parkiran belakang "
+        ]
+      },
+      {
+        "tag": "toilet",
+        "patterns": [
+          "Dimana letak wc",
+          "Dimana wc",
+          "Apa ada wc",
+          "wc",
+          "Dimana letak toilet",
+          "Dimana toilet",
+          "Apa ada toilet",
+          "toilet"
+        ],
+        "responses": [
+          "Wc/toilet banyak tersebar baik di gedung 1 atau 2 dan ada disetiap ujung lantai "
+        ]
+      },
+      {
+        "tag": "inventaris_labkom",
+        "patterns": [
+          "Apa saja alat-alat yang ada di labkom",
+          "alat-alat yang ada di labkom",
+          "alat-alat yang ada di lab komputer",
+          "alat-alat yang ada di laboratorium komputer",
+          "inventaris labkom",
+          "inventaris laboratorium komputer",
+          "alat laboratorium komputer",
+          "peralatan laboratorium komputer",
+          "alat lab komputer",
+          "peralatan lab komputer",
+          "alat labkom",
+          "peralatan labkom"
+        ],
+        "responses": [
+          "Di Laboratorium Komputer terdapat set komputer yang berjumlah kurang lebih 80 set, kabel LAN yang menyesuaikan jumlah komputer, stop contact, dan masih banyak lagi peralatan yang mana bisa digunakan untuk keperluan mahasiswa"
+        ]
+      },
+      {
+        "tag": "inventaris_labkimia",
+        "patterns": [
+          "Apa saja alat-alat yang ada di lab kimia",
+          "alat-alat yang ada di lab kimia",
+          "alat-alat yang ada di lab kimia",
+          "alat-alat yang ada di laboratorium kimia",
+          "inventaris lab kimia",
+          "inventaris laboratorium kimia",
+          "alat lab kimia",
+          "peralatan lab kimia"
+        ],
+        "responses": [
+          "Di Laboratorium kimia terdapat 1) Beaker Glass 2) Gelas Ukur 3) Corong Gelas 4) Pengaduk Kaca 5) Karet Penghisap 6) Pipet Ukur 7) Pipet Volume 8) Pipet Tetes 9) Labu Ukur 10) Batang Pengaduk Ujung Spiral 11) Spatula Stainlessteel 12) Lampu Spirtus dari Logam 13) Erlenmeyer 14) Cawan Porselin 15) Neraca Analitik 16) Botol Semprot 17) Mortar Pastle 18) Klem Buret 19) Statif 20) Buret 21) Kuvet dan Rak Kuvet 22) Batang Ose Ujung Bulat dan Ose Ujung Lurus 23) Tabung Reaksi dan Tabung Durham 24) Pengaduk L 25) Lampu Spirtus 26) Rak Tabung Reaksi. Dan masih banyak lagi alat-alat yang dapat digunakan mahasiswa untuk pembelajaran."
+        ]
+      },
+      {
+        "tag": "inventaris_labfisika",
+        "patterns": [
+          "Apa saja alat-alat yang ada di lab fisika",
+          "alat-alat yang ada di lab fisika",
+          "alat-alat yang ada di laboratorium fisika",
+          "inventaris lab fisika",
+          "inventaris laboratorium fisika",
+          "alat lab fisika",
+          "peralatan lab fisika"
+        ],
+        "responses": [
+          "Di Laboratorium fisika terdapat 1) Jangka Sorong 2) Neraca 3) Stopwatch 4) Newton Cradle 5) Katrol 6) Termometer 7) Ticker Timer 8) Gelas Ukur 9) Erlenmeyer 10) Peralatan Pemuaian 11) Rheostat 12) Multimeter 13) Elektroskop 14) Cermin 15) Lensa 16) Garpu Tala. Dan masih banyak lagi alat-alat yang dapat digunakan mahasiswa untuk pembelajaran."
+        ]
+      },
+      {
+        "tag": "inventaris_labfarmasi",
+        "patterns": [
+          "Apa saja alat-alat yang ada di lab farmasi",
+          "alat-alat yang ada di lab farmasi",
+          "alat-alat yang ada di laboratorium farmasi",
+          "inventaris lab farmasi",
+          "inventaris laboratorium farmasi",
+          "alat lab farmasi",
+          "peralatan lab farmasi"
+        ],
+        "responses": [
+          "Di Laboratorium farmasi terdapat 1) Timbangan Analitik 2) Thermospecronic 3) UV Cabinet 4) Spectrophotometer 5) Refraktometer 6) Mikroskop Listrik 7) pH meter Melting Point 8) Timbangan Ohause 9) Pompa Vacum 10) Blender 11) Water Bath 12) Oven 13) Tanur  14) Kompor Gas 15) Lemari asam 16) Desikator 17) Sentrifuge 18) Magnetic stirrer 19) Hotplate stirrer 20) Freez Dryer. Dan masih banyak lagi alat-alat yang dapat digunakan mahasiswa untuk pembelajaran."
+        ]
+      },
+      {
+        "tag": "inventaris_labbiologi",
+        "patterns": [
+          "Apa saja alat-alat yang ada di lab biologi",
+          "alat-alat yang ada di lab biologi",
+          "alat-alat yang ada di lab bio",
+          "alat-alat yang ada di laboratorium biologi",
+          "inventaris lab biologi",
+          "inventaris lab bio",
+          "inventaris laboratorium biologi",
+          "alat lab biologi",
+          "alat lab bio",
+          "peralatan lab biologi",
+          "peralatan lab bio"
+        ],
+        "responses": [
+          "Di Laboratorium biologi terdapat 1) Gelas Ukur 2) Tabung Ukur 3) Labu Ukur 4) Gelas Arloji 5) Erlenmeyer 6) Pipet 7) Corong Buchner 8) Corong Pisah 9) Buret 10) Batang Pengaduk 11) Kawat Kasa 12) Kaki Tiga 13) Klem 14) Pembakaran Spiritus 15) Statif 16) Mikroskop 17) Kaca Pembesar 18) Stetoscope 19) Autovlave 20) Kotak Genetika 21) Terarium 22) Tensimeter 23) Vaskulum 24) Pinset 25) Atmometer 26) Panci Bedah dan Pisau Bedah 27) Pila Kapiler 28) Model Anatomi Manusia. Dan masih banyak lagi alat-alat yang dapat digunakan mahasiswa untuk pembelajaran."
+        ]
+      }
+    ]
+  }
